@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class Star extends StatelessWidget {
   final Color color;
-  final double size;
+  final double? size;
 
   const Star({
-    Key key,
-    this.color,
+    Key? key,
+    required this.color,
     this.size,
   }) : super(key: key);
 
@@ -62,8 +62,8 @@ class StarRating extends StatelessWidget {
   final double starSize;
 
   const StarRating({
-    Key key,
-    @required this.value,
+    Key? key,
+    required this.value,
     this.color = Colors.deepOrange,
     this.starSize = 25,
   }) : super(key: key);
@@ -84,3 +84,4 @@ class StarRating extends StatelessWidget {
     );
   }
 }
+
