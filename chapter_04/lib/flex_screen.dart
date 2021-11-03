@@ -117,19 +117,20 @@ class FlexScreen extends StatelessWidget {
   }
 }
 
+// with not-nullable implementation
 class LabeledContainer extends StatelessWidget {
-  final double width;
-  final double height;
-  final Color color;
+  final double? width;
+  final double? height;
+  final Color? color;
   final String text;
-  final Color textColor;
+  final Color? textColor;
 
   const LabeledContainer({
-    Key key,
+    Key? key,
     this.width,
     this.height = double.infinity,
     this.color,
-    @required this.text,
+    @required this.text = '',
     this.textColor,
   }) : super(key: key);
 
